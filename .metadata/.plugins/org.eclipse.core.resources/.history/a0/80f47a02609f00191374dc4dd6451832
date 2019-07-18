@@ -1,0 +1,19 @@
+import { Component, OnInit } from '@angular/core';
+import { PessoaService } from "../../service/pessoa.service.ts"
+
+@Component({
+  selector: 'app-pessoa',
+  templateUrl: './pessoa.component.html',
+  styleUrls: ['./pessoa.component.css']
+})
+export class PessoaComponent implements OnInit {
+
+
+  constructor(pessoaService: PessoaService) { }
+
+  ngOnInit() {
+  
+  	
+  }
+
+}

@@ -1,0 +1,88 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <a routerLink="/salvar" class="btn btn-success">Cadastrar</a>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Lista de Pessoas</h4>
+
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                <th>
+                                    ID
+                                </th>
+                                <th>
+                                    CPF
+                                </th>
+                                <th>
+                                    NOME
+                                </th>
+                                <th>
+                                    EMAIL
+                                </th>
+                                <th>
+                                    DT. NASCIMENTO
+                                </th>
+                                <th>
+                                    Editar
+                                </th>
+                                <th>
+                                    Apagar
+                                </th>
+                                </thead>
+                                <tbody>
+                                <tr *ngFor="let pessoa of pessoas">
+                                    <td>
+                                        {{pessoa.id}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.cpf}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.nome}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.email}}
+                                    </td>
+                                    <td>
+                                        {{pessoa.dtnascimento | date:"dd/MM/yyyy"}}
+                                    </td>
+                                    <td>
+                                        <a [routerLink]="['/salvar',pessoa.id]">
+
+                                            <button mat-raised-button type="button" matTooltip="Editar"
+                                                    [matTooltipPosition]="'above'"
+                                                    class="btn btn-primary btn-link btn-sm btn-just-icon">
+                                                <i class="material-icons">edit</i>
+                                            </button>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <button mat-raised-button type="button" matTooltip="Remover"
+                                                [matTooltipPosition]="'above'"
+                                                class="btn btn-danger btn-link btn-sm btn-just-icon"
+                                                (click)="apagar(pessoa.id)">
+                                            <i class="material-icons">close</i>
+                                        </button>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

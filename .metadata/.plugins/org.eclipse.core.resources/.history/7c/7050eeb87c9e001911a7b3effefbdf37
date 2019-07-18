@@ -1,0 +1,39 @@
+package br.com.softplan.model;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.validation.constraints.NotNull;
+
+@Entity
+public class Pessoa {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
+	@NotNull
+	@Column(unique = true)
+	private String cpf;
+	@NotNull
+	private String nome;
+	private String sexo;
+	private String email;
+	@NotNull
+	private LocalDate dtnascimento;
+	private String natualidade;
+	private String nacionalidade;
+	private Integer numero;
+	private Endereco endereco;
+	private LocalDate dtcadastro;
+	private LocalDate dtAlteracao;
+	
+	
+	
+	
+	
+	
+}

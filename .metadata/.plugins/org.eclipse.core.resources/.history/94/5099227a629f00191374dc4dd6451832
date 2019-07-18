@@ -1,0 +1,17 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from  "@angular/common/http";
+import { Pessoa } from "./model/pessoa";
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PessoaService {
+
+  constructor(http:HttpClient) { }
+  pessoas:Array<Pessoa>;
+  
+  buscarTodos(){
+  	
+  	this.http.get("localhost:8080/pessoas").then(pessoas =>{ this.pessoas = pessoas});
+  }
+}

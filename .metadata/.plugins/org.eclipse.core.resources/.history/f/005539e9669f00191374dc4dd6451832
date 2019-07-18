@@ -1,0 +1,31 @@
+import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders, HttpClientModule } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators'
+
+import { Pessoa } from "../model/pessoa";
+;
+
+const httpOptions = {
+  headers: new HttpHeaders({ 
+    'Access-Control-Allow-Origin':'*'
+  })
+};
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PessoaService {
+
+  constructor(private http:HttpClient) { }
+  pessoas:Array<Pessoa>;
+  
+  buscarTodos(){
+  	
+  	return this.http.get("localhost:8080/pessoa", headers: {
+        'Content-Type': 'application/json',
+      },mode: 'no-cors')
+  	.pipe(map((pessoas:Array<Pessoa>) => this.pessoas = pessoas));
+  	
+  }
+}
