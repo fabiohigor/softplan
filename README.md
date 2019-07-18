@@ -1,1 +1,1 @@
-#LEIA-ME
+A Imagem está em #docker push fabiohigor/softplan:avaliacao

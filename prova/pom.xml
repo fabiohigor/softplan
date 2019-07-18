@@ -11,7 +11,7 @@
 	<groupId>br.com.softplan</groupId>
 	<artifactId>prova</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>prova</name>
 	<description>Seleção Dev Java</description>
 
