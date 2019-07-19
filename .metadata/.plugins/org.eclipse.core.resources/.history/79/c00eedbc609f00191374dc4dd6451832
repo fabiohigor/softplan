@@ -1,8 +1,0 @@
-<p>pessoa works!</p>
-<table>
-	<th> 
-		<tr>nome</tr>
-	</th>
-	<tr *ngFor="let pessoa of pessoas" >
-	<td>{{}}</td>
-</table>

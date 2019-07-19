@@ -1,1 +1,1 @@
-A Imagem está em #docker push fabiohigor/softplan:avaliacao
+A Imagem está em docker pull fabiohigor/softplan:avaliacao
